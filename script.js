@@ -38,3 +38,117 @@ showRosterButton.addEventListener("click", function () {
   rosterList.style.display = "block";
 });
 // AI-generated code ends here
+
+// AI-generated code starts here (San Jose Sharks)
+// Student prompt: Show the San Jose Sharks and their roster when a button is clicked
+
+// This is a simple list of San Jose Sharks players (2023-24 example, not full)
+// You can add more players if you want!
+var sharksPlayers = [
+  "Logan Couture",
+  "Tomas Hertl",
+  "Mario Ferraro",
+  "Mikael Granlund",
+  "Mackenzie Blackwood",
+  "William Eklund",
+];
+
+// Get the button and the roster list from the page for Sharks
+var showSharksRosterButton = document.querySelector("#show-sharks-roster");
+var sharksRosterList = document.querySelector("#sharks-roster");
+
+// When the Sharks button is clicked...
+showSharksRosterButton.addEventListener("click", function () {
+  // Clear out the list first (in case it's already filled)
+  sharksRosterList.innerHTML = "";
+
+  // For each player in the sharksPlayers list...
+  for (var i = 0; i < sharksPlayers.length; i++) {
+    // Create a new <li> element
+    var li = document.createElement("li");
+    // Set the text to the player's name
+    li.textContent = sharksPlayers[i];
+    // Add the <li> to the <ul>
+    sharksRosterList.appendChild(li);
+  }
+
+  // Show the roster list (it starts hidden)
+  sharksRosterList.style.display = "block";
+});
+// AI-generated code ends here (San Jose Sharks)
+
+// AI-generated code starts here (New Jersey Devils)
+// Student prompt: Show the New Jersey Devils and their roster when a button is clicked
+
+// This is a simple list of New Jersey Devils players (2023-24 example, not full)
+// You can add more players if you want!
+var devilsPlayers = [
+  "Jack Hughes",
+  "Nico Hischier",
+  "Jesper Bratt",
+  "Dougie Hamilton",
+  "Ondrej Palat",
+  "Vitek Vanecek",
+];
+
+// Get the button and the roster list from the page for Devils
+var showDevilsRosterButton = document.querySelector("#show-devils-roster");
+var devilsRosterList = document.querySelector("#devils-roster");
+
+// When the Devils button is clicked...
+showDevilsRosterButton.addEventListener("click", function () {
+  // Clear out the list first (in case it's already filled)
+  devilsRosterList.innerHTML = "";
+
+  // For each player in the devilsPlayers list...
+  for (var i = 0; i < devilsPlayers.length; i++) {
+    // Create a new <li> element
+    var li = document.createElement("li");
+    // Set the text to the player's name
+    li.textContent = devilsPlayers[i];
+    // Add the <li> to the <ul>
+    devilsRosterList.appendChild(li);
+  }
+
+  // Show the roster list (it starts hidden)
+  devilsRosterList.style.display = "block";
+});
+// AI-generated code ends here (New Jersey Devils)
+
+// AI-generated code starts here (Florida Panthers)
+// Student prompt: Show the Florida Panthers and their roster when a button is clicked
+
+// This is a simple list of Florida Panthers players (2023-24 example, not full)
+// You can add more players if you want!
+var panthersPlayers = [
+  "Aleksander Barkov",
+  "Matthew Tkachuk",
+  "Sergei Bobrovsky",
+  "Sam Reinhart",
+  "Carter Verhaeghe",
+  "Aaron Ekblad",
+];
+
+// Get the button and the roster list from the page for Panthers
+var showPanthersRosterButton = document.querySelector("#show-panthers-roster");
+var panthersRosterList = document.querySelector("#panthers-roster");
+
+// When the Panthers button is clicked...
+showPanthersRosterButton.addEventListener("click", function () {
+  // Clear out the list first (in case it's already filled)
+  panthersRosterList.innerHTML = "";
+
+  // For each player in the panthersPlayers list...
+  for (var i = 0; i < panthersPlayers.length; i++) {
+    // Create a new <li> element
+    var li = document.createElement("li");
+    // Set the text to the player's name
+    li.textContent = panthersPlayers[i];
+    // Add the <li> to the <ul>
+    panthersRosterList.appendChild(li);
+  }
+
+  // Show the roster list (it starts hidden)
+  panthersRosterList.style.display = "block";
+});
+// AI-generated code ends here (Florida Panthers)
