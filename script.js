@@ -152,3 +152,41 @@ showPanthersRosterButton.addEventListener("click", function () {
   panthersRosterList.style.display = "block";
 });
 // AI-generated code ends here (Florida Panthers)
+
+// AI-generated code starts here (Dallas Stars)
+// Student prompt: Show the Dallas Stars and their roster when a button is clicked
+
+// This is a simple list of Dallas Stars players (example, not full)
+// You can add more players if you want!
+var starsPlayers = [
+  "Jason Robertson",
+  "Jamie Benn",
+  "Roope Hintz",
+  "Miro Heiskanen",
+  "Jake Oettinger",
+  "Tyler Seguin",
+];
+
+// Get the button and the roster list from the page for Stars
+var showStarsRosterButton = document.querySelector("#show-stars-roster");
+var starsRosterList = document.querySelector("#stars-roster");
+
+// When the Stars button is clicked...
+showStarsRosterButton.addEventListener("click", function () {
+  // Clear out the list first (in case it's already filled)
+  starsRosterList.innerHTML = "";
+
+  // For each player in the starsPlayers list...
+  for (var i = 0; i < starsPlayers.length; i++) {
+    // Create a new <li> element
+    var li = document.createElement("li");
+    // Set the text to the player's name
+    li.textContent = starsPlayers[i];
+    // Add the <li> to the <ul>
+    starsRosterList.appendChild(li);
+  }
+
+  // Show the roster list (it starts hidden)
+  starsRosterList.style.display = "block";
+});
+// AI-generated code ends here (Dallas Stars)

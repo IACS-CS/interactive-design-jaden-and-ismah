@@ -1,0 +1,23 @@
+/* Grid layout for team sections */
+#teams-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  align-items: start;
+  padding: 12px;
+}
+
+/* Simple card styles for each team section */
+.team-card {
+  border: 1px solid #422fd1;
+  border-radius: 6px;
+  padding: 12px;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+/* Keep lists tidy */
+.team-card ul {
+  margin-top: 8px;
+  padding-left: 20px;
+}
