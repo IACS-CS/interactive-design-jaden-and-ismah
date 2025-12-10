@@ -13,15 +13,53 @@
   </head>
   <body>
     <h1>My Interactive Design</h1>
-    <div class="flashcard">
-      <div class="flashcard-face flashcard-front">
-        <p>Mr.Hinkle</p>
-      </div>
 
-      <div class="flashcard-face flashcard-back">
-        <p>An amazing teacher who made this project possible.</p>
+    <div class="question-wrapper">
+      <p class="question">
+        If you add the Boston Celtics Championships, the Los Angeles Lakers
+        Championships, the Chicago Bulls Championships, and the Golden State
+        Warriors Championships, what number do you get?
+      </p>
+
+      <div class="answer-buttons">
+        <!-- data-action string values must match the data-feedback attributes exactly -->
+        <button data-action="Oooooo, So Close. Not really.">41</button>
+        <button data-action="Oh no.">57</button>
+        <button data-action="Correct!">48</button>
+        <button data-action="Oh no.">53</button>
       </div>
     </div>
+
+    <div class="feedback-area">
+      <div data-feedback="Oh no.">
+        <p>
+          I think you should stay away from basketball and play lacrosse. Try
+          Again!
+        </p>
+      </div>
+
+      <div data-feedback="Oooooo, So Close. Not really.">
+        <p>
+          I think you should do a bit more research. Actually, a lot more. Try
+          Again!
+        </p>
+      </div>
+
+      <div data-feedback="Correct!">
+        <p>
+          <strong>Correct!</strong>
+          The Boston Celtics have 18 Championships, the Los Angeles Lakers
+          have 17 Championships, the Chicago Bulls have 6 Championships, and
+          the Golden State Warriors have 7 Championships. 18 + 17 + 6 + 7 =
+          48! Well done!
+        </p>
+      </div>
+
+      <div id="try-again-container" style="display: none">
+        <button data-action="reset">Try Again!</button>
+      </div>
+    </div>
+
     <hr />
     <small>
       <a href="citations.html">Citations</a>
