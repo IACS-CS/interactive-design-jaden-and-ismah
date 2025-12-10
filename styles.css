@@ -1,48 +1,54 @@
-body{
-  font-family:'Times New Roman', Times, serif;
+body {
+  color: white;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 50px;
   padding: 3rem;
-  background-color: rgb(255, 255, 255);
+  background-color: white;
 }
 
-.flashcard{
+.flashcard {
   height: 150px;
   width: 300px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: auto;
-  margin-bottom: auto;
-  transform-style: preserve-3d
-  cursor: pointer;
-  perspective: 1000px;
+  margin: 50px auto;
   position: relative;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  transform: all 0.5s ease-in-out;
+  perspective: 1000px;
+  cursor: pointer;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
 }
 
-.flashcard:hover{
- scale: 2;
-}
-
-.flashcard:hover{
-  transform: rotateY(180deg);
-}
-
-.card-front,
-.card-back {
-  background-color: rgb(0, 0, 0);
+.flashcard-face {
   position: absolute;
   width: 100%;
   height: 100%;
-  backface-visibility: hidden;
-  border-radius: initial;
   display: flex;
-  flex-direction: column;
-  align-items: right;
-  justify-content: right;
-  padding: 0px;
+  justify-content: center;
+  align-items: center;
+  padding: 22px;
+  text-align: center;
+  backface-visibility: hidden;
+  border: 2px solid black;
+  border-radius: 10px;
+  top: 0;
+  left: 0;
   box-sizing: border-box;
 }
 
+.flashcard-face.flashcard-front,
+.flashcard-face.flashcard-back {
+  background-image: url("Firefly_Gemini Flash_a cool space background for a flashcard 268310.png");
+  background-size: cover;
+  background-position: center;
+}
 
+.flashcard-face.flashcard-front {
+ transform: rotateY(0deg);
+}
 
+.flashcard-face.flashcard-back {
+  transform: rotateY(180deg);
+}
 
+.flashcard.flipped {
+  transform: rotateY(180deg);
+}
