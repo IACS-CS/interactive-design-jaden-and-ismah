@@ -12,17 +12,21 @@
     <base href="./" />
   </head>
   <body>
-    <h1>My Interactive Design</h1>
+
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Italianno&family=Road+Rage&display=swap');
+</style>
+
+    <h1>Ismah and Jayden's Interactive Design Project</h1>
 
     <div class="question-wrapper">
       <p class="question">
-        If you add the Boston Celtics Championships, the Los Angeles Lakers
-        Championships, the Chicago Bulls Championships, and the Golden State
-        Warriors Championships, what number do you get?
+        If you add the <i>Boston Celtics Championships</i>, the <i>Los Angeles Lakers
+        Championships</i>, the <i>Chicago Bulls Championships</i>, and the <i>Golden State
+        Warriors Championships</i>, what number do you get?
       </p>
 
       <div class="answer-buttons">
-        <!-- data-action string values must match the data-feedback attributes exactly -->
         <button data-action="Oooooo, So Close. Not really.">41</button>
         <button data-action="Oh no.">57</button>
         <button data-action="Correct!">48</button>
@@ -31,21 +35,21 @@
     </div>
 
     <div class="feedback-area">
-      <div data-feedback="Oh no.">
+      <div data-feedback="Oh no." class="red">
         <p>
           I think you should stay away from basketball and play lacrosse. Try
           Again!
         </p>
       </div>
 
-      <div data-feedback="Oooooo, So Close. Not really.">
+      <div data-feedback="Oooooo, So Close. Not really." class="yellow">
         <p>
-          I think you should do a bit more research. Actually, a lot more. Try
+          Oooooo, so close. I think you should do a bit more research. Actually, a lot more. Try
           Again!
         </p>
       </div>
 
-      <div data-feedback="Correct!">
+      <div data-feedback="Correct!" class="green">
         <p>
           <strong>Correct!</strong>
           The Boston Celtics have 18 Championships, the Los Angeles Lakers
