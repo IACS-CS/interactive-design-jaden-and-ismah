@@ -5,62 +5,142 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="A simple choose your own adventure game."
+      content="A basketball quiz with multiple questions, feedback, score, and a fun finish."
     />
-    <title>My Choose-Your-Own Adventure!</title>
+    <title>Ismah's Interactive Design Project</title>
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <base href="./" />
   </head>
-  <body>
 
+  <body>
     <style>
-@import url('https://fonts.googleapis.com/css2?family=Italianno&family=Road+Rage&display=swap');
-</style>
+      @import url("https://fonts.googleapis.com/css2?family=Italianno&family=Road+Rage&display=swap");
+    </style>
 
     <h1>Ismah's Interactive Design Project</h1>
 
     <div class="question-wrapper">
-      <p class="question">
-        If you add the <i>Boston Celtics Championships</i>, the <i>Los Angeles Lakers
-        Championships</i>, the <i>Chicago Bulls Championships</i>, and the <i>Golden State
-        Warriors Championships</i>, what number do you get?
+      <p class="question" id="question-title">
+        Question <span id="q-num">1</span> of <span id="q-total">5</span>
       </p>
 
-      <div class="answer-buttons">
-        <button data-action="Oooooo, So Close. Not really.">41</button>
-        <button data-action="Oh no.">57</button>
-        <button data-action="Correct!">48</button>
-        <button data-action="Oh no.">53</button>
+    
+      <section class="quiz-question active" data-question="1">
+        <p class="question">
+          If you add the <i>Boston Celtics Championships</i>, the <i>Los Angeles Lakers
+          Championships</i>, the <i>Chicago Bulls Championships</i>, and the <i>Golden State
+          Warriors Championships</i>, what number do you get?
+        </p>
+
+        <div class="answer-buttons">
+          <button data-correct="false" data-feedback="yellow">41</button>
+          <button data-correct="false" data-feedback="red">57</button>
+          <button data-correct="true" data-feedback="green">48</button>
+          <button data-correct="false" data-feedback="red">53</button>
+        </div>
+
+        <p class="correct-explain" style="display: none">
+          The Boston Celtics have 18 Championships, the Los Angeles Lakers have 17 Championships,
+          the Chicago Bulls have 6 Championships, and the Golden State Warriors have 7 Championships.
+          18 + 17 + 6 + 7 = 48! Well done!
+        </p>
+      </section>
+
+      
+      <section class="quiz-question" data-question="2">
+        <p class="question">
+          Who is the greatest player of all time?
+        </p>
+
+        <div class="answer-buttons">
+          <button data-correct="true" data-feedback="green">LeBron James</button>
+          <button data-correct="false" data-feedback="red">Kobe Bryant</button>
+          <button data-correct="false" data-feedback="yellow">Steph Curry</button>
+          <button data-correct="false" data-feedback="red">Michael Jordan</button>
+        </div>
+
+        <p class="correct-explain" style="display: none">
+          You picked LeBron James — KING behavior. 
+        </p>
+      </section>
+
+      
+      <section class="quiz-question" data-question="3">
+        <p class="question">
+          Who was nicknamed “The Truth” in the NBA?
+        </p>
+
+        <div class="answer-buttons">
+          <button data-correct="false" data-feedback="red">Allen Iverson</button>
+          <button data-correct="true" data-feedback="green">Paul Pierce</button>
+          <button data-correct="false" data-feedback="yellow">Scottie Pippen</button>
+          <button data-correct="false" data-feedback="red">Dwayne Wade</button>
+        </div>
+
+        <p class="correct-explain" style="display: none">
+          Paul Pierce was “The Truth.” No cap. 
+        </p>
+      </section>
+
+      
+      <section class="quiz-question" data-question="4">
+        <p class="question">
+          How many times has LeBron made the NBA Finals?
+        </p>
+
+        <div class="answer-buttons">
+          <button data-correct="true" data-feedback="green">10</button>
+          <button data-correct="false" data-feedback="red">7</button>
+          <button data-correct="false" data-feedback="yellow">9</button>
+          <button data-correct="false" data-feedback="red">12</button>
+        </div>
+
+        <p class="correct-explain" style="display: none">
+          10 trips to the Finals — that's a LOT of June basketball. 
+        </p>
+      </section>
+
+      
+      <section class="quiz-question" data-question="5">
+        <p class="question">
+          What year was the NBA created?
+        </p>
+
+        <div class="answer-buttons">
+          <button data-correct="false" data-feedback="red">1939</button>
+          <button data-correct="true" data-feedback="green">1946</button>
+          <button data-correct="false" data-feedback="yellow">1959</button>
+          <button data-correct="false" data-feedback="red">1931</button>
+        </div>
+
+        <p class="correct-explain" style="display: none">
+          1946 — hoops history unlocked. 
+        </p>
+      </section>
+
+      
+      <div class="quiz-controls">
+        <button id="next-btn" class="control-btn" style="display: none">Next ➜</button>
+        <button id="restart-btn" class="control-btn" style="display: none">Try Again!</button>
       </div>
+
+      <p class="score" id="score-text">Score: 0</p>
     </div>
 
-    <div class="feedback-area">
-      <div data-feedback="Oh no." class="red">
-        <p>
-          I think you should stay away from basketball and play lacrosse. Try
-          Again!
-        </p>
-      </div>
+    
+    <div class="feedback-area" id="feedback-area"></div>
 
-      <div data-feedback="Oooooo, So Close. Not really." class="yellow">
-        <p>
-          Oooooo, so close. I think you should do a bit more research. Actually, a lot more. Try
-          Again!
-        </p>
-      </div>
-
-      <div data-feedback="Correct!" class="green">
-        <p>
-          <strong>Correct!</strong>
-          The Boston Celtics have 18 Championships, the Los Angeles Lakers
-          have 17 Championships, the Chicago Bulls have 6 Championships, and
-          the Golden State Warriors have 7 Championships. 18 + 17 + 6 + 7 =
-          48! Well done!
-        </p>
-      </div>
-
-      <div id="try-again-container" style="display: none">
-        <button data-action="reset">Try Again!</button>
+    <!-- ✅ Fun finish screen -->
+    <div class="finish-screen" id="finish-screen" style="display: none">
+      <div class="finish-card">
+        <h2 class="finish-title">YOU FINISHED!! 🏆</h2>
+        <p class="finish-score" id="final-score"></p>
+        <div class="confetti" aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span>
+        </div>
+        <button id="finish-restart" class="control-btn">Run it back 🔁</button>
       </div>
     </div>
 
